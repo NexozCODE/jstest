@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Технический сервис</title>
+</head>
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/script.js" defer></script>
+<body>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Форма заявки</h2>
+    <form id="requestForm" style="padding-right:25px; padding-left:25px;">
+      <label for="deviceModel">Модель устройства:</label> 
+      <input type="text" id="deviceModel" class="form-control" required><br><br>
+      
+      <label for="faultType">Тип неисправности:</label>
+      <input type="text" id="faultType" class="form-control" required><br><br>
+      
+      <label for="orderInfo">Информация об заказе:</label>
+      <textarea id="orderInfo" class="form-control" required></textarea><br><br>
+      
+      <label for="clientName">Клиент:</label>
+      <input type="text" id="clientName" class="form-control" required><br><br>
+      
+      <label for="masterName">Имя мастера:</label>
+      <input type="text" id="masterName" class="form-control" required><br><br>
+      
+      <div id="select_container" style="margin-bottom:10px">
+        <label for="select_status">Статус:</label>
+        <select name="" id="select_status">
+          <option style="color: #fc5a03; font-weight:bold;" value="Ожидает">Ожидает</option>
+          <option style="color: #fcba03; font-weight:bold;" value="В работе">В работе</option>
+          <option style="color: green; font-weight:bold;" value="Готово">Готово</option> 
+          <option disabled></option>
+          <option style="color: green; font-weight:bold;" value="DELETE">Удалить</option>
+        </select>
+      </div>
+      
+      <button type="submit" id="submitRequestBtn">Отправить</button>
+      <button type="button" id="editRequestBtn">Сохранить изменения</button>
+    </form>
+  </div>
+</div>
+
+<h2 class="table-name">Таблица заявок</h2>
+<div class="create_container">
+  <button class="create-request-btn" id="createRequestBtn" style="width: 150px; height: 30px">Создать заявку</button>
+</div>
+
+<div id="requestsTable" class="requests-table"></div>
+</body>
+</html>
