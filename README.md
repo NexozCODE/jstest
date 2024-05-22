@@ -1,2 +1,2 @@
 # jstest
-a
+JS EXAMPLES FOR NEWBIES
